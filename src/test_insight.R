@@ -2,7 +2,7 @@ rm(list=ls())
 #df_bigdataset=read.csv("C:\\Users\\shiva\\Downloads\\Insight\\complaints.csv")
 #df=read.csv("C:\\Users\\shiva\\Downloads\\Insight\\consumer_complaints-master\\insight_testsuite\\test_1\\input\\complaints.csv")
 
-df=read.csv("complaints.csv")#reading the datafile
+df=read.csv("../insight_testsuite/test_1/input/complaints.csv")#reading the datafile
 #b=levels(df_bigdataset$Product)
 #products=unique(df_bigdataset$Product)
 #years
@@ -110,13 +110,11 @@ for(i in 1:length(product) )
       #print(paste(temp,"temp"))
       final<-rbind(final,temp)
       #print(paste(final,"final"))
-
+      
     }
     
     
   }
 }
 final
-write.csv(final,"report.csv", row.names = FALSE)
-
-
+write.csv(final,"../insight_testsuite/test_1/output/report.csv", row.names = FALSE)
